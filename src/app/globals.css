@@ -3,31 +3,32 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  /* colors */
+  /* primary */
+  --test: 190, 89%, 35%, 1;
+  --color-p00: hsla(190, 89%, 35%, 1);
+  --color-p10: hsla(190, 52%, 48%, 1);
+  --color-p20: hsla(190, 89%, 35%, 0.5);
+  --color-p30: hsla(190, 89%, 35%, 0.2);
+  /* secondary */
+  --color-s00: hsla(40, 100%, 64%, 1);
+  --color-s10: hsla(40, 100%, 71%, 1);
+  --color-s20: hsla(40, 100%, 64%, 0.5);
+  --color-s30: hsla(40, 100%, 64%, 0.2);
+  /* neutral */
+  --color-n00: hsla(225, 4%, 10%, 1);
+  --color-n10: hsla(225, 4%, 10%, 1);
+  --color-n20: hsla(222, 5%, 70%, 1);
+  --color-n30: hsla(0, 0%, 97%, 1);
+  --color-n40: hsla(0, 0%, 100%, 1);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
+@layer base {
+  /* * {
+    @apply border-border;
+  } */
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  body {
+    @apply bg-neutral-3 text-neutral-0;
   }
 }
