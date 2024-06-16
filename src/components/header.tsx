@@ -11,7 +11,7 @@ export default function Header() {
   const { sidebarToggle } = useSidebarStore();
 
   return (
-    <header className="border-b border-neutral-2 bg-neutral-4 p-4">
+    <header className="sticky top-0 z-10 border-b border-neutral-2 bg-neutral-4 p-4">
       <div className="mb-4 hidden justify-end gap-4 md:flex">
         <LanguageDropdown />
         <Button variant="ghost/primary">Masuk</Button>
