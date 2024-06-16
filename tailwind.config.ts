@@ -8,6 +8,7 @@ const config: Config = {
   ],
   theme: {
     colors: {
+      transparent: "#1C00ff00",
       primary: {
         "0": "var(--color-p00)",
         "1": "var(--color-p10)",

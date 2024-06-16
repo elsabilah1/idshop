@@ -2,6 +2,21 @@ import Image from "next/image";
 import Container from "./common/container";
 import Text from "./common/text";
 
+const categoryList = [
+  { title: "Tas", icon: "bag.svg" },
+  { title: "Pakaian Wanita", icon: "dress.svg" },
+  { title: "Pakaian Pria", icon: "shirt.svg" },
+  { title: "Sepatu Wanita", icon: "woman-shoe.svg" },
+  { title: "Sepatu Pria", icon: "man-shoe.svg" },
+  { title: "Hobi", icon: "hobby.svg" },
+  { title: "Makanan dan Minuman", icon: "food-and-drink.svg" },
+  { title: "Perlengkapan Rumah", icon: "home-and-living.svg" },
+  { title: "Komputer dan Aksesoris", icon: "laptop.svg" },
+  { title: "Ibu dan Anak", icon: "baby.svg" },
+  { title: "Perawatan dan Kecantikan", icon: "makeup.svg" },
+  { title: "Kesehatan", icon: "medicine.svg" },
+];
+
 export default function Category() {
   return (
     <Container title="Kategori">
@@ -34,18 +49,3 @@ export default function Category() {
     </Container>
   );
 }
-
-const categoryList = [
-  { title: "Tas", icon: "bag.svg" },
-  { title: "Pakaian Wanita", icon: "dress.svg" },
-  { title: "Pakaian Pria", icon: "shirt.svg" },
-  { title: "Sepatu Wanita", icon: "woman-shoe.svg" },
-  { title: "Sepatu Pria", icon: "man-shoe.svg" },
-  { title: "Hobi", icon: "hobby.svg" },
-  { title: "Makanan dan Minuman", icon: "food-and-drink.svg" },
-  { title: "Perlengkapan Rumah", icon: "home-and-living.svg" },
-  { title: "Komputer dan Aksesoris", icon: "laptop.svg" },
-  { title: "Ibu dan Anak", icon: "baby.svg" },
-  { title: "Perawatan dan Kecantikan", icon: "makeup.svg" },
-  { title: "Kesehatan", icon: "medicine.svg" },
-];
