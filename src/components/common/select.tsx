@@ -4,6 +4,7 @@ import * as React from "react";
 import * as SelectPrimitive from "@radix-ui/react-select";
 
 import { cn } from "@/lib/utils";
+import { CaretDown } from "./icons";
 
 const Select = SelectPrimitive.Root;
 
@@ -18,14 +19,14 @@ const SelectTrigger = React.forwardRef<
   <SelectPrimitive.Trigger
     ref={ref}
     className={cn(
-      "border-input bg-background ring-offset-background placeholder:text-muted-foreground focus:ring-ring flex h-10 w-full items-center justify-between rounded-md border px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1",
+      "group flex w-full items-center justify-between gap-4 rounded-lg border border-neutral-2 bg-neutral-4 px-3 py-[10px] text-sm font-medium tracking-[0.4px] text-neutral-1 placeholder:text-neutral-2 focus:outline-none focus:ring-2 focus:ring-primary-3 disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1",
       className
     )}
     {...props}
   >
     {children}
     <SelectPrimitive.Icon asChild>
-      <ChevronDown className="h-4 w-4 opacity-50" />
+      <CaretDown className="transition-transform group-data-[state=open]:rotate-180" />
     </SelectPrimitive.Icon>
   </SelectPrimitive.Trigger>
 ));
@@ -43,7 +44,7 @@ const SelectScrollUpButton = React.forwardRef<
     )}
     {...props}
   >
-    <ChevronUp className="h-4 w-4" />
+    <CaretDown />
   </SelectPrimitive.ScrollUpButton>
 ));
 SelectScrollUpButton.displayName = SelectPrimitive.ScrollUpButton.displayName;
@@ -60,7 +61,7 @@ const SelectScrollDownButton = React.forwardRef<
     )}
     {...props}
   >
-    <ChevronDown className="h-4 w-4" />
+    <CaretDown />
   </SelectPrimitive.ScrollDownButton>
 ));
 SelectScrollDownButton.displayName =
@@ -74,7 +75,7 @@ const SelectContent = React.forwardRef<
     <SelectPrimitive.Content
       ref={ref}
       className={cn(
-        "bg-popover text-popover-foreground data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 relative z-50 max-h-96 min-w-[8rem] overflow-hidden rounded-md border shadow-md",
+        "data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 relative z-50 max-h-96 min-w-[8rem] overflow-hidden rounded-lg border border-neutral-2 bg-neutral-4 py-2 text-neutral-1",
         position === "popper" &&
           "data-[side=bottom]:translate-y-1 data-[side=left]:-translate-x-1 data-[side=right]:translate-x-1 data-[side=top]:-translate-y-1",
         className
@@ -85,7 +86,7 @@ const SelectContent = React.forwardRef<
       <SelectScrollUpButton />
       <SelectPrimitive.Viewport
         className={cn(
-          "p-1",
+          "",
           position === "popper" &&
             "h-[var(--radix-select-trigger-height)] w-full min-w-[var(--radix-select-trigger-width)]"
         )}
@@ -117,14 +118,14 @@ const SelectItem = React.forwardRef<
   <SelectPrimitive.Item
     ref={ref}
     className={cn(
-      "focus:bg-accent focus:text-accent-foreground relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
+      "relative flex w-full cursor-pointer select-none items-center rounded-sm px-4 py-[10px] text-sm tracking-[0.08px] outline-none data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
       className
     )}
     {...props}
   >
-    <span className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
+    <span className="absolute inset-y-0 left-0 w-[5px]">
       <SelectPrimitive.ItemIndicator>
-        <Check className="h-4 w-4" />
+        <div className="h-full w-[5px] bg-primary-0" />
       </SelectPrimitive.ItemIndicator>
     </span>
 
