@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Work_Sans } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/header";
 
 const workSans = Work_Sans({ subsets: ["latin"], preload: false });
 
@@ -16,7 +17,10 @@ type RootLayoutType = {
 export default function RootLayout({ children }: RootLayoutType) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={workSans.className}>{children}</body>
+      <body className={workSans.className}>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }

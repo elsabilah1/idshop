@@ -28,7 +28,7 @@ const buttonVariants = cva(
     },
     defaultVariants: {
       variant: "filled/primary",
-      size: "large",
+      size: "medium",
     },
   }
 );
