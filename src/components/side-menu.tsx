@@ -12,7 +12,7 @@ export default function SideMenu() {
   return (
     <div
       className={cn(
-        "fixed inset-0 flex flex-col bg-neutral-4 p-4",
+        "fixed inset-0 z-50 flex flex-col bg-neutral-4 p-4",
         !isOpen && "hidden"
       )}
     >
