@@ -17,7 +17,7 @@ const textVariants = cva("", {
       "title/small": "text-sm",
 
       "display/large": "text-[4rem] leading-[4.5rem]",
-      "display/medium": "text-[4rem] leading-[4.5rem]",
+      "display/medium": "text-5xl",
     },
   },
   defaultVariants: {
