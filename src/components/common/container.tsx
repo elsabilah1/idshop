@@ -23,11 +23,7 @@ export default function Container({
   return (
     <section className={cn("bg-neutral-4 p-4 md:rounded-[10px]", className)}>
       <div className="mb-4 flex items-center justify-between">
-        <Text
-          variant="title/large"
-          as="h2"
-          className="font-medium tracking-[0.4%]"
-        >
+        <Text variant="title/large" as="h2">
           {title}
         </Text>
         {link && (

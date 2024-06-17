@@ -30,6 +30,7 @@ export const compactIdFormatter = (val: number) => {
   const compact = new Intl.NumberFormat("id-ID", {
     notation: "compact",
   }).format(val);
+  const compatWithDot = compact.replaceAll(",", ".");
 
-  return compact.replaceAll(",", ".").toUpperCase();
+  return compatWithDot.replace(/\s/g, "").toUpperCase();
 };

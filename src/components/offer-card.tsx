@@ -16,6 +16,7 @@ export interface OfferCardProps {
 
 export default function OfferCard({ variant, data }: OfferCardProps) {
   const isPrimary = variant === "primary";
+
   return (
     <div
       className={cn(
@@ -42,7 +43,7 @@ export default function OfferCard({ variant, data }: OfferCardProps) {
         <Text
           variant="title/large"
           className={cn(
-            "mb-8 font-medium",
+            "mb-8",
             isPrimary ? "text-neutral-4" : "text-neutral-1"
           )}
           as="p"

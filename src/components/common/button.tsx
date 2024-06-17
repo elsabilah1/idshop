@@ -8,19 +8,20 @@ const buttonVariants = cva(
     variants: {
       variant: {
         "filled/primary":
-          "bg-primary-0 *:fill-neutral-4 text-neutral-4 hover:bg-primary-1",
+          "bg-primary-0 [&_svg]:fill-neutral-4 text-neutral-4 hover:bg-primary-1",
         "filled/secondary":
-          "bg-secondary-0 *:fill-neutral-4 text-neutral-4 hover:bg-secondary-1",
+          "bg-secondary-0 [&_svg]:fill-neutral-4 text-neutral-4 hover:bg-secondary-1",
 
         "outline/primary":
-          "shadow-[inset_0_0_0_2px_var(--color-p00)] *:fill-primary-0 text-primary-0 hover:bg-primary-3",
+          "shadow-[inset_0_0_0_2px_var(--color-p00)] [&_svg]:fill-primary-0 text-primary-0 hover:bg-primary-3",
 
         "outline/secondary":
-          "shadow-[inset_0_0_0_2px_var(--color-s00)] *:fill-secondary-0 text-secondary-0 hover:bg-secondary-3",
+          "shadow-[inset_0_0_0_2px_var(--color-s00)] [&_svg]:fill-secondary-0 text-secondary-0 hover:bg-secondary-3",
 
-        "ghost/primary": "text-primary-0 *:fill-primary-0 hover:bg-primary-3",
+        "ghost/primary":
+          "text-primary-0 [&_svg]:fill-primary-0 hover:bg-primary-3",
         "ghost/secondary":
-          "text-secondary-0 *:fill-secondary-0 hover:bg-secondary-3",
+          "text-secondary-0 [&_svg]:fill-secondary-0 hover:bg-secondary-3",
       },
       size: {
         large: "px-5 py-4 tracking-[0.2px]",
