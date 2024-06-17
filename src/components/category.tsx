@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Container from "./common/container";
 import Text from "./common/text";
+import Link from "next/link";
 
 const categoryList = [
   { title: "Tas", icon: "bag.svg" },
@@ -23,8 +24,9 @@ export default function Category() {
       <div className="md:px-[10px]">
         <div className="grid grid-cols-3 gap-[1px] bg-neutral-2 md:grid-cols-6">
           {categoryList.map(item => (
-            <div
+            <Link
               key={item.title}
+              href={`/`}
               className="flex cursor-pointer flex-col items-center bg-neutral-4 px-1 py-2 text-center transition-all hover:shadow-[inset_0_0_0_2px_var(--color-p00)] md:px-2 md:py-4"
             >
               <div className="relative size-[70px] md:size-[100px]">
@@ -35,14 +37,8 @@ export default function Category() {
                   fill
                 />
               </div>
-
-              <Text
-                variant="title/medium"
-                className="font-medium tracking-[0.16px]"
-              >
-                {item.title}
-              </Text>
-            </div>
+              <Text variant="title/medium">{item.title}</Text>
+            </Link>
           ))}
         </div>
       </div>

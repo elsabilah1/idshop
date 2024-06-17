@@ -7,7 +7,7 @@ interface BadgeProps {
 export default function Badge({ item }: BadgeProps) {
   return (
     <div
-      key="item"
+      key={item}
       className="relative h-[33px] w-[66px] rounded-[5px] bg-neutral-4"
     >
       <Image

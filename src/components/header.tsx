@@ -8,7 +8,7 @@ import SearchBar from "./search-bar";
 import { useSidebarStore } from "@/store";
 
 export default function Header() {
-  const { sidebarToggle } = useSidebarStore();
+  const { isOpen, sidebarToggle } = useSidebarStore();
 
   return (
     <header className="sticky top-0 z-10 border-b border-neutral-2 bg-neutral-4 p-4">

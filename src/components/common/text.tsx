@@ -10,12 +10,12 @@ const textVariants = cva("", {
 
       "label/large": "text-base font-medium tracking-[0.2px]",
       "label/medium": "text-sm font-medium tracking-[0.4px]",
-      "label/small": "text-xs",
+      "label/small": "text-xs font-medium tracking-[0.6px]",
 
       "title/large":
         "text-[1.375rem] leading-[1.75rem] font-medium tracking-[0.4%]",
-      "title/medium": "text-base",
-      "title/small": "text-sm",
+      "title/medium": "text-base font-medium tracking-[0.16px]",
+      "title/small": "text-sm font-medium tracking-[0.12px]",
 
       "display/large": "text-[4rem] leading-[4.5rem]",
       "display/medium": "text-5xl",

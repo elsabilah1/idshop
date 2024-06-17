@@ -79,8 +79,8 @@ export default function FlashSale() {
     >
       <Carousel className="mx-5">
         <CarouselContent>
-          {flashSaleList.map(item => (
-            <CarouselItem key={item.name} className="basis-auto">
+          {flashSaleList.map((item, i) => (
+            <CarouselItem key={i} className="basis-auto">
               <ProductCard
                 item={{ ...item, image: "flash-sale/" + item.image }}
               />

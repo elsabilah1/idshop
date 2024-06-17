@@ -24,10 +24,6 @@
 }
 
 @layer base {
-  /* * {
-    @apply border-border;
-  } */
-
   body {
     @apply bg-neutral-3 text-neutral-0;
   }

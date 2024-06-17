@@ -31,18 +31,11 @@ export default function ProductCard({ item }: ProductCardProps) {
         <Text as="p" variant="body/small" className="truncate">
           {item.name}
         </Text>
-        <Text
-          as="p"
-          variant="title/small"
-          className="font-medium tracking-[0.12px]"
-        >
+        <Text as="p" variant="title/small">
           {formatRupiah(item.price)}
         </Text>
         {item.sold && (
-          <Text
-            variant="label/small"
-            className="font-medium tracking-[0.6px] text-neutral-1"
-          >
+          <Text variant="label/small" className="text-neutral-1">
             {compactIdFormatter(item.sold)} Terjual
           </Text>
         )}
