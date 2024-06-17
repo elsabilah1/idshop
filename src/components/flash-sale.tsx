@@ -55,19 +55,19 @@ const flashSaleList = [
     name: "Nama Product",
     price: 23097,
     discount: 50,
-    image: "product-1.png",
+    image: "product-2.png",
   },
   {
     name: "Nama Product",
     price: 75340,
     discount: 50,
-    image: "product-1.png",
+    image: "product-3.png",
   },
   {
     name: "Nama Product",
     price: 59999,
     discount: 50,
-    image: "product-1.png",
+    image: "product-4.png",
   },
 ];
 
@@ -81,7 +81,9 @@ export default function FlashSale() {
         <CarouselContent>
           {flashSaleList.map(item => (
             <CarouselItem key={item.name} className="basis-auto">
-              <ProductCard item={item} />
+              <ProductCard
+                item={{ ...item, image: "flash-sale/" + item.image }}
+              />
             </CarouselItem>
           ))}
         </CarouselContent>

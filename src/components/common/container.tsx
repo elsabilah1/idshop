@@ -2,6 +2,7 @@ import { ReactNode } from "react";
 import Text from "./text";
 import { Button, buttonVariants } from "./button";
 import Link from "next/link";
+import { cn } from "@/lib/utils";
 
 interface ContainerProps {
   title: string;
@@ -10,11 +11,17 @@ interface ContainerProps {
     title: string;
     url: string;
   };
+  className?: string;
 }
 
-export default function Container({ title, children, link }: ContainerProps) {
+export default function Container({
+  title,
+  children,
+  link,
+  className,
+}: ContainerProps) {
   return (
-    <section className="bg-neutral-4 p-4 md:rounded-[10px]">
+    <section className={cn("bg-neutral-4 p-4 md:rounded-[10px]", className)}>
       <div className="mb-4 flex items-center justify-between">
         <Text
           variant="title/large"

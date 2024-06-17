@@ -2,6 +2,7 @@ import Banner from "@/components/banner";
 import Category from "@/components/category";
 import FlashSale from "@/components/flash-sale";
 import OfferCard, { OfferCardProps } from "@/components/offer-card";
+import Recomendation from "@/components/recomendation";
 import TopUpAndBill from "@/components/top-up-and-bill";
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
         ))}
       </section>
       <FlashSale />
+      <Recomendation />
     </main>
   );
 }

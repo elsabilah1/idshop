@@ -23,3 +23,13 @@ export const formatRupiah = (angka: string | number = 0, prefix?: string) => {
   rupiah = split[1] != undefined ? rupiah + "," + split[1] : rupiah;
   return prefix ? rupiah : rupiah ? "Rp" + rupiah : "";
 };
+
+export const compactIdFormatter = (val: number) => {
+  if (val > 10000) return "10RB+";
+
+  const compact = new Intl.NumberFormat("id-ID", {
+    notation: "compact",
+  }).format(val);
+
+  return compact.replaceAll(",", ".").toUpperCase();
+};
