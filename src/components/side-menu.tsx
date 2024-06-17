@@ -56,7 +56,7 @@ export default function SideMenu() {
                   alt="logo"
                   fill
                   sizes="171px"
-                  className="hidden object-contain md:block"
+                  className="object-contain"
                 />
               </div>
               <Button onClick={sidebarToggle} variant="ghost/primary">

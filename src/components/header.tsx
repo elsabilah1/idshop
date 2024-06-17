@@ -18,13 +18,13 @@ export default function Header() {
         <Button>Daftar</Button>
       </div>
       <div className="flex items-center">
-        <div className="relative h-[54px] w-[171px]">
+        <div className="relative hidden h-[54px] w-[171px] md:block">
           <Image
             src="/images/logo.png"
             alt="logo"
             fill
             sizes="171px"
-            className="hidden object-contain md:block"
+            className="object-contain"
           />
         </div>
         <div className="flex flex-1 items-center justify-center gap-2 md:gap-8">
