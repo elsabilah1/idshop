@@ -28,8 +28,8 @@ export default function Banner() {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
+        <CarouselPrevious className="hidden group-hover:block" />
+        <CarouselNext className="hidden group-hover:block" />
       </Carousel>
     </div>
   );

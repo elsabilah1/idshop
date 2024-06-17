@@ -25,7 +25,7 @@ const buttonVariants = cva(
       size: {
         large: "px-5 py-4 tracking-[0.2px]",
         medium: "px-4 py-3 tracking-[0.4px] text-sm",
-        small: "px-3 py-2 tracking-[0.6px] text-xs",
+        small: "px-3 py-2 tracking-[0.6px] text-xs [&_svg]:size-[18px]",
       },
     },
     defaultVariants: {
