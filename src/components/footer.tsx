@@ -1,45 +1,18 @@
 import Text from "./common/text";
-import Tiktok from "../../public/images/sm-tiktok.png";
-import Instagram from "../../public/images/sm-instagram.png";
-import Youtube from "../../public/images/sm-youtube.png";
-import Facebook from "../../public/images/sm-facebook.png";
 import GooglePlay from "../../public/images/google-play.png";
 import AppStore from "../../public/images/app-store.png";
 import Image from "next/image";
 import Link from "next/link";
 import Badge from "./common/badge";
 import FooterMenu from "./footer-menu";
-
-const paymentMethodList = [
-  "bca",
-  "mandiri",
-  "bri",
-  "bni",
-  "gopay",
-  "dana",
-  "alfamart",
-  "visa",
-  "mastercard",
-];
-const deliveryServiceList = ["jne", "sicepat", "jnt", "gosend", "grabexpress"];
-const securityList = ["iso", "verified-by-visa"];
-const socialMediaList = [Tiktok, Instagram, Youtube, Facebook];
-const customerServiceLinks = [
-  "pusat-bantuan",
-  "cara-pembelian",
-  "pengiriman",
-  "pengembalian-barang-dan-dana",
-  "metode-pembayaran",
-  "hubungan-kami",
-];
-const exploreIdShopLinks = [
-  "tentang-kami",
-  "kebijakan-privasi",
-  "karir",
-  "blog",
-  "idshop-security",
-  "id-mall",
-];
+import {
+  customerServiceLinks,
+  deliveryServiceList,
+  exploreIdShopLinks,
+  paymentMethodList,
+  securityList,
+  socialMediaList,
+} from "@/data";
 
 export default function Footer() {
   return (

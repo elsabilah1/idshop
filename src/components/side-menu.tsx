@@ -50,13 +50,15 @@ export default function SideMenu() {
         {isOpen && (
           <div className="flex h-full flex-col p-4">
             <div className="mb-10 flex items-center justify-between">
-              <Image
-                priority
-                src="/images/logo.png"
-                alt="logo"
-                width={171}
-                height={54}
-              />
+              <div className="relative h-[54px] w-[171px]">
+                <Image
+                  src="/images/logo.png"
+                  alt="logo"
+                  fill
+                  sizes="171px"
+                  className="hidden object-contain md:block"
+                />
+              </div>
               <Button onClick={sidebarToggle} variant="ghost/primary">
                 <ArrowLeft />
               </Button>

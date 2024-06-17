@@ -3,7 +3,7 @@ import { Work_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
 import SideMenu from "@/components/side-menu";
-import { ReactLenis, useLenis } from "@/lib/lenis";
+import { ReactLenis } from "@/lib/lenis";
 import Footer from "@/components/footer";
 
 const workSans = Work_Sans({ subsets: ["latin"], preload: false });

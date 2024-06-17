@@ -14,6 +14,7 @@ export default function Badge({ item }: BadgeProps) {
         src={`/images/${item}.png`}
         alt={item}
         className="object-contain px-2 py-1"
+        sizes="50px"
         fill
       />
     </div>

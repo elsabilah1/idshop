@@ -29,6 +29,7 @@ export default function OfferCard({ variant, data }: OfferCardProps) {
           fill
           src={`/images/${data.img}.png`}
           alt={data.img}
+          sizes="342px"
           className="object-cover"
         />
       </div>
