@@ -22,7 +22,7 @@ export default function Home() {
   );
 }
 
-export const offerCardList: OfferCardProps[] = [
+const offerCardList: OfferCardProps[] = [
   {
     variant: "secondary",
     data: {
