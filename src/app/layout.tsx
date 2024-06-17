@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/header";
 import SideMenu from "@/components/side-menu";
 import { ReactLenis, useLenis } from "@/lib/lenis";
+import Footer from "@/components/footer";
 
 const workSans = Work_Sans({ subsets: ["latin"], preload: false });
 
@@ -24,6 +25,7 @@ export default function RootLayout({ children }: RootLayoutType) {
           <Header />
           <SideMenu />
           {children}
+          <Footer />
         </body>
       </ReactLenis>
     </html>

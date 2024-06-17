@@ -17,9 +17,7 @@ export default function ProductCard({ item }: ProductCardProps) {
     <div className="relative max-w-[152px] rounded bg-neutral-4 p-4">
       <div className="absolute right-0 top-[6px] rounded-l-sm bg-primary-0 px-2 text-neutral-4">
         {item.discount > 0 && (
-          <Text variant="label/medium" className="font-medium tracking-[0.4px]">
-            -{item.discount}%
-          </Text>
+          <Text variant="label/medium">-{item.discount}%</Text>
         )}
       </div>
       <Image
@@ -30,7 +28,7 @@ export default function ProductCard({ item }: ProductCardProps) {
         className="mb-4"
       />
       <div className="space-y-1">
-        <Text as="p" variant="body/small" className="truncate tracking-[0.2px]">
+        <Text as="p" variant="body/small" className="truncate">
           {item.name}
         </Text>
         <Text

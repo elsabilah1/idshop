@@ -6,10 +6,10 @@ const textVariants = cva("", {
     variant: {
       "body/large": "text-base",
       "body/medium": "text-sm",
-      "body/small": "text-xs",
+      "body/small": "text-xs tracking-[0.2px]",
 
-      "label/large": "text-base",
-      "label/medium": "text-sm",
+      "label/large": "text-base font-medium tracking-[0.2px]",
+      "label/medium": "text-sm font-medium tracking-[0.4px]",
       "label/small": "text-xs",
 
       "title/large": "text-[1.375rem] leading-[1.75rem]",
@@ -21,7 +21,7 @@ const textVariants = cva("", {
     },
   },
   defaultVariants: {
-    variant: "body/small",
+    variant: "body/medium",
   },
 });
 
