@@ -1,15 +1,10 @@
 import Image from "next/image";
 import Text from "./common/text";
 import { compactIdFormatter, formatRupiah } from "@/lib/utils";
+import { Product } from "@/types";
 
 interface ProductCardProps {
-  item: {
-    name: string;
-    price: number;
-    discount: number;
-    image: string;
-    sold?: number;
-  };
+  item: Product;
 }
 
 export default function ProductCard({ item }: ProductCardProps) {

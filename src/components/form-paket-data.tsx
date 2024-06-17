@@ -17,7 +17,7 @@ export default function FormPaketData() {
 
   return (
     <div className="flex w-full flex-col gap-4 md:flex-row">
-      <Input placeholder="Nomor Telpon" icon={<Phone />} className="h-11" />
+      <Input floatingLabel="Nomor Telpon" icon={<Phone />} className="h-11" />
       <Select value={value} onValueChange={setValue}>
         <SelectTrigger className="w-full">
           <SelectValue />
